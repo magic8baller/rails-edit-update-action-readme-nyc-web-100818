@@ -1,0 +1,10 @@
+<!-- form_for determines that @post is not a new instance of the Post class & automatically send to the update path -->
+<%= form_for @post do |f| %>
+  <%= f.label 'Post Title' %><br>
+  <%= f.text_field :title %><br>
+<!--@post is not a new instance of Post, the inputs on this form, the text field and text area, will be populated with the corresponding object values. -->
+  <%= f.label 'Post Description' %><br>
+  <%= f.text_area :description %><br>
+<!-- form will be routed to the update action. Before we try to implement the update action, let's first make sure the data is being routed properly -->
+  <%= f.submit "Submit Post" %>
+<% end %>
